@@ -1,0 +1,12 @@
+server:
+    port: 9000
+spring:
+    application:
+        name: singleton-eureka-server
+eureka:
+    client:
+        register-with-eureka: false
+        fetch-registry: false
+        service-url:
+            defaultZone: http://localhost:${server.port}/eureka/
+
