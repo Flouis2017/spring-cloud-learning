@@ -20,14 +20,14 @@ public class FeignTwoController {
 	}
 
 	@RequestMapping("/add/{a}/{b}")
-	public Integer add(@PathVariable(value = "a") Integer a, @PathVariable(value = "b") Integer b){
+	public String add(@PathVariable(value = "a") Integer a, @PathVariable(value = "b") Integer b){
 		if (a == null){
 			a = 0;
 		}
 		if (b == null){
 			b = 0;
 		}
-		return a + b;
+		return "invoke feign-two micro service, the result is: " + (a + b);
 	}
 
 }

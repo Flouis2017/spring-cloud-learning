@@ -15,6 +15,7 @@
 		<module>feign-one</module>
 		<module>feign-eureka-server</module>
 		<module>feign-two</module>
+		<module>feign-three</module>
 	</modules>
 
 	<dependencies>
