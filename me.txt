@@ -1,6 +1,16 @@
 eureka-server 模块：实践注册中心，分别模拟单节点、双节点和多节点（集群）
-feign 模块：实践服务提供与服务调用
+    - @EnableEurekaServer：将当前微服务声明为一个注册中心
+    - @EnableDiscoveryClient：服务注册与发现的注解，使用该注解后本微服务将会被注册到Eureka注册中心，以供其他微服务调用
+【小结】Eureka用于服务注册与服务发现
 
+feign 模块：实践服务提供与服务调用（负载均衡），并模拟服务熔断（在服务调用端进行熔断）
+    - @EnableFeignClients：服务调用注解，配合@FeignClient(name="<spring.application.name>")使用调用其他微服务
+    - @FeignClient(name = "feign-more-one", fallback = FeignMoreOneHystrix.class)：fallback是熔断器类
+【小结】Feign用于服务提供与服务调用，Feign自依赖的Hystrix用于服务熔断
+
+zuul 模块：实践服务路由
+    - @EnableZuulProxy：将当前微服务声明为一个zuul路由
+【小结】服务调用是服务路由的真子集，所以，zuul也具备负载均衡的能力，和feign一样，实现负载均衡，关键要将spring.application.name和接口进行统一。
 
 
 

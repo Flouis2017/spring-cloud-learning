@@ -1,0 +1,21 @@
+server:
+    port: 7100
+spring:
+    application:
+        name: zuul-simple
+zuul:
+    routes:
+        baidu:
+            path: /it/**
+            url: http://www.ityouknow.com/
+        feign-one:
+            path: /ms_fo/** # http://localhost:7100/ms_fo/hello/{name}
+            url: http://localhost:7001/
+        api-one:
+            path: /producer/** # http://localhost:7100/producer/hello/{name}
+            serviceId: feign-one
+
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:9000/eureka/

@@ -1,9 +1,9 @@
 server:
-    port: 7001
+    port: 7004
 
 spring:
     application:
-        name: feign-one
+        name: feign-one # 这里测试利用zuul做微服务负载均衡，所以将微服务命名为“feign-one”
 
 eureka:
     client:

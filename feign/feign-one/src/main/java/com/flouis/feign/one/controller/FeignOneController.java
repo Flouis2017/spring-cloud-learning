@@ -15,7 +15,6 @@ public class FeignOneController {
 
 	@RequestMapping("/hello/{name}")
 	public String hello(@PathVariable(value = "name") String name){
-		System.out.println("invoke feign-one micro service: hello");
 		return "hello " + name + ", this is feign-one message!";
 	}
 

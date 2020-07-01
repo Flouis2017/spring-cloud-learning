@@ -9,33 +9,22 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>feign</artifactId>
+	<artifactId>zuul</artifactId>
 	<packaging>pom</packaging>
 	<modules>
-		<module>feign-one</module>
-		<module>feign-eureka-server</module>
-		<module>feign-two</module>
-		<module>feign-three</module>
-		<module>feign-four</module>
+		<module>zuul-simple</module>
 	</modules>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-			<version>2.0.2.RELEASE</version>
-		</dependency>
 	</dependencies>
-
 
 </project>
