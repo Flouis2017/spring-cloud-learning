@@ -12,6 +12,7 @@ zuul 模块：实践服务路由
     - @EnableZuulProxy：将当前微服务声明为一个zuul路由
 【小结】服务调用是服务路由的真子集，所以，zuul也具备负载均衡的能力，和feign一样，实现负载均衡，关键要将spring.application.name和接口进行统一。
 
-
+gateway 模块：实践服务网关，SpringCloud Gateway是SpringCloud生态系统中的网关，目标是替代Netflix Zuul
+【小结】zuul有的gateway也有，zuul没有的gateway还有
 
 

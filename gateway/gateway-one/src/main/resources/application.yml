@@ -1,0 +1,20 @@
+
+server:
+    port: 7200
+spring:
+    application:
+        name: gateway-one
+    cloud:
+        gateway:
+            routes:
+
+            - id: firstRoute # localhost:7200/spring-cloud ==》 http://www.ityouknow.com/spring-cloud
+              uri: http://www.ityouknow.com
+              predicates:
+              - Path=/spring-cloud
+
+            - id: secondRoute
+              uri: https://www.baidu.com
+              predicates:
+              - Method=GET,POST,PUT,DELETE
+              - Path=/
